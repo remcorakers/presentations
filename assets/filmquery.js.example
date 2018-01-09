@@ -1,0 +1,30 @@
+import React, { Component } from "react";
+import { graphql } from "react-apollo";
+import gql from "graphql-tag";
+import Spinner from "spinner";
+
+class FilmList extends Component {
+  render() {
+    if (this.props.data.loading) {
+      return <Spinner />;
+    }
+
+    if (this.props.data.error) {
+      return <div>Oh no! Something went wrong...</div>;
+    }
+
+    return [this.props.data.map((film) => <div key={film.id}>{film.title}</div>)];
+  }
+}
+
+const GetFilms = gql`
+  query{
+    allFilms {
+      films {
+        title
+      }
+    }
+  }
+`;
+
+export default graphql(GetFilms)(FilmList);
