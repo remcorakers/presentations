@@ -21,6 +21,7 @@ const GetFilms = gql`
   query{
     allFilms {
       films {
+        id
         title
       }
     }

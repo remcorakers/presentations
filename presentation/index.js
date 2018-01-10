@@ -1,6 +1,7 @@
 import React from "react";
 import {
   BlockQuote,
+  Code,
   Cite,
   Text,
   Deck,
@@ -71,12 +72,12 @@ export default class Presentation extends React.Component {
           <Heading size={3} textColor="secondary">Managing the increasingly complex data requirements of modern web/mobile apps.</Heading>
         </Slide>
 
-        <Slide transition={["fade"]} align="center flex-start">
+        <Slide transition={["fade"]} align="flex-start center">
           {/* <Heading size={1}>REST request</Heading> */}
           <Image src={restRequest} height={650} bgColor="#fff" />
         </Slide>
 
-        <Slide transition={["fade"]} align="center flex-start">
+        <Slide transition={["fade"]} align="flex-start center">
           {/* <Heading size={1}>GraphQL request</Heading> */}
           <Image src={graphqlRequest} fit bgColor="#fff" />
         </Slide>
@@ -98,10 +99,59 @@ export default class Presentation extends React.Component {
           </List>
         </Slide>
 
-        <Slide transition={["fade"]} align="center flex-start">
+        <Slide transition={["fade"]} align="flex-start center">
           <Heading size={1}>Structure</Heading>
           <Image src={graphqlStructure} width={"1000"} />
         </Slide>
+
+        <CodeSlide
+          color="#fff"
+          // showLineNumbers={false}
+          textSize={24}
+          transition={[]}
+          lang="js"
+          fontSize={40}
+          code={require("raw-loader!../assets/filmSchema.graphql.example")}
+          ranges={[
+            { loc: [0, 8], title: "GraphQL schema" },
+          ]}
+        />
+
+        <CodeSlide
+          color="#fff"
+          // showLineNumbers={false}
+          textSize={24}
+          transition={[]}
+          lang="js"
+          code={require("raw-loader!../assets/filmsQuery.graphql.example")}
+          ranges={[
+            { loc: [0, 8], title: "GraphQL query" },
+          ]}
+        />
+
+        <CodeSlide
+          color="#fff"
+          textSize={24}
+          // showLineNumbers={false}
+          transition={[]}
+          lang="js"
+          code={require("raw-loader!../assets/filmQuery.graphql.example")}
+          ranges={[
+            { loc: [0, 8], title: "GraphQL query with arguments" },
+          ]}
+        />
+
+        <CodeSlide
+          color="#fff"
+          textSize={24}
+          // showLineNumbers={false}
+          transition={[]}
+          lang="js"
+          code={require("raw-loader!../assets/filmmutation.graphql.example")}
+          ranges={[
+            { loc: [0, 9], title: "GraphQL mutation" },
+          ]}
+        />
 
         <Slide transition={["fade"]} bgColor="tertiary">
           <Heading size={3}>Step 1</Heading>
@@ -129,17 +179,17 @@ export default class Presentation extends React.Component {
         />
 
         <CodeSlide
-          lang="js"
           color="#fff"
           // showLineNumbers={false}
           transition={[]}
+          lang="js"
           code={require("raw-loader!../assets/filmtype.cs.example")}
           ranges={[
-            { loc: [0, 62], title: "GraphQL film type (C#)" },
-            { loc: [0, 8], title: "Declaring the name of the type" },
-            { loc: [10, 11], title: "First field: title" },
-            { loc: [11, 12], title: "Second field: episode ID" },
-            { loc: [33, 40], title: "Connected field: species" }
+            { loc: [0, 21], title: "GraphQL film type (C#)" },
+            { loc: [0, 5], title: "Declaring the name of the type" },
+            { loc: [7, 8], title: "First field: title" },
+            { loc: [8, 9], title: "Second field: episode ID" },
+            { loc: [14, 19], title: "Connected field: species" }
           ]}
         />
 
@@ -158,7 +208,7 @@ export default class Presentation extends React.Component {
           <List>
             <ListItem>Test your schema</ListItem>
             <ListItem>Validate your queries</ListItem>
-            <ListItem>Front-enders can explore</ListItem>
+            <ListItem>Front-end devs can explore</ListItem>
             <ListItem>On NPM and NuGet</ListItem>
           </List>
           <Link href="http://graphql.org/swapi-graphql/?query=%7B%0A%20%20allFilms%20%7B%0A%20%20%20%20films%20%7B%0A%20%20%20%20%20%20title%0A%20%20%20%20%20%20director%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A">
@@ -181,12 +231,12 @@ export default class Presentation extends React.Component {
           color="#fff"
           // showLineNumbers={false}
           transition={[]}
-          code={require("raw-loader!../assets/filmquery.js.example")}
+          code={require("raw-loader!../assets/filmcomponent.js.example")}
           ranges={[
             { loc: [0, 32], title: "GraphQL film query (React)" },
             { loc: [0, 4], title: "Importing" },
-            { loc: [19, 28], title: "Creating film query" },
-            { loc: [29, 30], title: "Wrapping FilmList with HOC" },
+            { loc: [19, 29], title: "Creating film query" },
+            { loc: [30, 31], title: "Wrapping FilmList with HOC" },
             { loc: [6, 17], title: "Rendering data" }
           ]}
         />
@@ -196,6 +246,7 @@ export default class Presentation extends React.Component {
 
           <Heading size={2} textColor="secondary">Apollo</Heading>
           <Heading size={2} textColor="secondary">Relay</Heading>
+          <Text>Support for caching, batching, optimistic UI updates, subscriptions and more.</Text>
         </Slide>
 
         <Slide transition={["fade"]}>

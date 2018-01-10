@@ -1,0 +1,7 @@
+type Film {
+  id: ObjID!
+  title: User!
+  episodeID: String!
+  director: String
+  releaseDate: Location
+}

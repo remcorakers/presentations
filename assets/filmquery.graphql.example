@@ -1,0 +1,6 @@
+query {
+  films(id: "123abc") {
+    id
+    title
+  }
+}

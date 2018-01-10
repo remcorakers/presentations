@@ -1,0 +1,11 @@
+import gql from 'graphql-tag';
+import { fullRoutesInfo, userBasicInfo } from './fragments';
+
+export default gql`
+  query GetFilms() {
+  allFilms {
+    films{
+      title
+    }
+  }
+`;

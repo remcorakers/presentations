@@ -1,0 +1,9 @@
+mutation {
+  createFilm(
+    title: "Star Wars: The last Jedi", 
+    director: "Rian Johnson") {
+      id
+      title
+      director
+    }
+  }
