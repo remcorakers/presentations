@@ -19,11 +19,11 @@ module.exports = {
         "NODE_ENV": JSON.stringify("production")
       }
     }),
-    new webpack.optimize.UglifyJsPlugin({
-      compressor: {
-        warnings: false
-      }
-    })
+    // new webpack.optimize.UglifyJsPlugin({
+    //   compressor: {
+    //     warnings: false
+    //   }
+    // })
   ],
   module: {
     loaders: [{
@@ -42,6 +42,9 @@ module.exports = {
     }, {
       test: /\.svg$/,
       loader: "url-loader?limit=10000&mimetype=image/svg+xml"
+    }, {
+      test: /\.(eot|svg|ttf|woff|woff2)$/,
+      loader: 'file-loader?name=public/fonts/[name].[ext]'
     }]
   }
 };

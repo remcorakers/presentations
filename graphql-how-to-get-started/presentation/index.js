@@ -52,12 +52,12 @@ export default class Presentation extends React.Component {
           <Text margin="10px 0 50px" size={2} fit bold>
             How to get started?
           </Text>
-          <Heading margin="100px 0 0 0" size={6}>
+          <Text margin="100px 0 0 0" size={5}>
             Remco Rakers
-          </Heading>
-          <Heading margin="20px 0 0 0" size={6}>
-            Deloitte Digital DevChat, January 9th, 2018.
-          </Heading>
+          </Text>
+          <Text margin="20px 0 0 0" size={5}>
+            Deloitte Digital DevChat, January 9th, 2018
+          </Text>
         </Slide>
 
         <Slide transition={["fade"]} bgColor="secondary" textColor="primary">
@@ -147,7 +147,7 @@ export default class Presentation extends React.Component {
           // showLineNumbers={false}
           transition={[]}
           lang="js"
-          code={require("raw-loader!../assets/filmmutation.graphql.example")}
+          code={require("raw-loader!../assets/filmMutation.graphql.example")}
           ranges={[
             { loc: [0, 9], title: "GraphQL mutation" },
           ]}
@@ -168,7 +168,7 @@ export default class Presentation extends React.Component {
           // showLineNumbers={false}
           transition={[]}
           lang="js"
-          code={require("raw-loader!../assets/filmtype.js.example")}
+          code={require("raw-loader!../assets/filmType.js.example")}
           ranges={[
             { loc: [0, 63], title: "GraphQL film type (JS)" },
             { loc: [0, 3], title: "Declaring the name of the type" },
@@ -183,7 +183,7 @@ export default class Presentation extends React.Component {
           // showLineNumbers={false}
           transition={[]}
           lang="js"
-          code={require("raw-loader!../assets/filmtype.cs.example")}
+          code={require("raw-loader!../assets/filmType.cs.example")}
           ranges={[
             { loc: [0, 21], title: "GraphQL film type (C#)" },
             { loc: [0, 5], title: "Declaring the name of the type" },
@@ -231,7 +231,7 @@ export default class Presentation extends React.Component {
           color="#fff"
           // showLineNumbers={false}
           transition={[]}
-          code={require("raw-loader!../assets/filmcomponent.js.example")}
+          code={require("raw-loader!../assets/filmComponent.js.example")}
           ranges={[
             { loc: [0, 32], title: "GraphQL film query (React)" },
             { loc: [0, 4], title: "Importing" },

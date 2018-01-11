@@ -1,5 +1,5 @@
 query {
-  films(id: "123abc") {
+  film(id: "123abc") {
     id
     title
   }
