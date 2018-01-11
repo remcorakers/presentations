@@ -289,6 +289,8 @@ export default class Presentation extends React.Component {
           <Heading size={1}>Thank you!</Heading>
           <Heading margin="100px 0 20px 0" size={4}>Remco Rakers</Heading>
           <Heading size={4}>Deloitte Digital Engineering</Heading>
+          <Text margin="200px 0 0 0" textSize={24}>Presentation made with <Link href="https://github.com/FormidableLabs/spectacle">Spectacle</Link></Text>
+          <Text margin="20px 0 0 0" textSize={24}><Link href="https://github.com/remcorakers/presentations">Sources on GitHub</Link></Text>
         </Slide>
 
       </Deck>
